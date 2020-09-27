@@ -8,5 +8,5 @@
 /// Model class for a Github Repository
 struct Repo {
     let account: String
-    let repo: String
+    let name: String
 }

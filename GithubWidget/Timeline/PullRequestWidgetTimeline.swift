@@ -28,7 +28,7 @@ struct PullRequestWidgetTimeline: IntentTimelineProvider {
             ),
             repo: Repo(
                 account: "octocat",
-                repo: "Hello-World"
+                name: "Hello-World"
             )
         )
         
@@ -63,7 +63,7 @@ struct PullRequestWidgetTimeline: IntentTimelineProvider {
                 pr = nil
             }
 
-            let entry = LatestPullRequest(date: currentDate, pr: pr, repo: Repo(account: account, repo: repo))
+            let entry = LatestPullRequest(date: currentDate, pr: pr, repo: Repo(account: account, name: repo))
             
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
