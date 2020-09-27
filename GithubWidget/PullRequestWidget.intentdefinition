@@ -43,7 +43,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
+						<string>None</string>
 						<key>INIntentParameterMetadataDefaultValue</key>
 						<string>octocat</string>
 						<key>INIntentParameterMetadataDefaultValueID</key>
