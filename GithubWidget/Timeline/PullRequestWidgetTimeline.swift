@@ -12,40 +12,23 @@ import WidgetKit
 struct PullRequestWidgetTimeline: IntentTimelineProvider {
     typealias Intent = ConfigurationIntent
     typealias Entry = LatestPullRequest
-    
+
     func placeholder(in context: Context) -> LatestPullRequest {
-        let entry = LatestPullRequest(
-            date: Date(),
-            pr: PullRequest(
-                number: 1,
-                title: "Read me update",
-                created: Date(),
-                author: "octocat",
-                branch: "ReadMe_Update",
-                base: "master",
-                url: "https://api.github.com/repos/octocat/Hello-World/pulls/631",
-                mergeable: true
-            ),
-            repo: Repo(
-                account: "octocat",
-                name: "Hello-World"
-            )
-        )
-        
+        let entry = LatestPullRequest.helloWorld
         return entry
     }
-    
+
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (LatestPullRequest) -> Void) {
         completion(self.placeholder(in: context))
     }
-    
+
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<LatestPullRequest>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
 
         guard let account = configuration.account,
               let repo = configuration.repo
-        
+
         else {
             let entry = self.placeholder(in: context)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))

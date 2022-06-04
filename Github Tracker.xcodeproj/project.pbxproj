@@ -11,7 +11,6 @@
 		3697A614251D419F0002C6C9 /* Github_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697A613251D419F0002C6C9 /* Github_TrackerApp.swift */; };
 		3697A616251D419F0002C6C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697A615251D419F0002C6C9 /* ContentView.swift */; };
 		3697A618251D41A30002C6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3697A617251D41A30002C6C9 /* Assets.xcassets */; };
-		3697A61B251D41A30002C6C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3697A61A251D41A30002C6C9 /* Preview Assets.xcassets */; };
 		3697A61D251D41A30002C6C9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697A61C251D41A30002C6C9 /* Persistence.swift */; };
 		3697A620251D41A30002C6C9 /* Github_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3697A61E251D41A30002C6C9 /* Github_Tracker.xcdatamodeld */; };
 		3697A62B251D41A30002C6C9 /* Github_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3697A62A251D41A30002C6C9 /* Github_TrackerTests.swift */; };
@@ -29,6 +28,9 @@
 		36BDD24D2520072C008F2218 /* SemanticDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CBD46252003DC00E7F2DD /* SemanticDateExtension.swift */; };
 		36BDD25C25200783008F2218 /* PullRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDD2562520076B008F2218 /* PullRequestLoader.swift */; };
 		36BDD26F252007B9008F2218 /* PullRequestWidgetTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDD265252007A2008F2218 /* PullRequestWidgetTimeline.swift */; };
+		36F2FA6E284BFE40007317B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F2FA6D284BFE40007317B3 /* Preview Assets.xcassets */; };
+		36F2FA72284BFEBD007317B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F2FA71284BFEBD007317B3 /* Preview Assets.xcassets */; };
+		36F2FA75284BFF4F007317B3 /* LatestPullRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2FA73284BFF35007317B3 /* LatestPullRequestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +77,6 @@
 		3697A613251D419F0002C6C9 /* Github_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_TrackerApp.swift; sourceTree = "<group>"; };
 		3697A615251D419F0002C6C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3697A617251D41A30002C6C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3697A61A251D41A30002C6C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3697A61C251D41A30002C6C9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3697A61F251D41A30002C6C9 /* Github_Checker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Github_Checker.xcdatamodel; sourceTree = "<group>"; };
 		3697A621251D41A30002C6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +99,9 @@
 		369CBD5C2520048000E7F2DD /* LatestPullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPullRequest.swift; sourceTree = "<group>"; };
 		36BDD2562520076B008F2218 /* PullRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestLoader.swift; sourceTree = "<group>"; };
 		36BDD265252007A2008F2218 /* PullRequestWidgetTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestWidgetTimeline.swift; sourceTree = "<group>"; };
+		36F2FA6D284BFE40007317B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36F2FA71284BFEBD007317B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36F2FA73284BFF35007317B3 /* LatestPullRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPullRequestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,23 +172,15 @@
 		3697A612251D419F0002C6C9 /* Github Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				36F2FA6C284BFE22007317B3 /* Preview Content */,
 				3697A613251D419F0002C6C9 /* Github_TrackerApp.swift */,
 				3697A615251D419F0002C6C9 /* ContentView.swift */,
 				3697A617251D41A30002C6C9 /* Assets.xcassets */,
 				3697A61C251D41A30002C6C9 /* Persistence.swift */,
 				3697A621251D41A30002C6C9 /* Info.plist */,
 				3697A61E251D41A30002C6C9 /* Github_Tracker.xcdatamodeld */,
-				3697A619251D41A30002C6C9 /* Preview Content */,
 			);
 			path = "Github Tracker";
-			sourceTree = "<group>";
-		};
-		3697A619251D41A30002C6C9 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				3697A61A251D41A30002C6C9 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		3697A629251D41A30002C6C9 /* Github TrackerTests */ = {
@@ -217,6 +213,7 @@
 		3697A650251D41D50002C6C9 /* GithubWidget */ = {
 			isa = PBXGroup;
 			children = (
+				36F2FA6F284BFEA4007317B3 /* Preview Content */,
 				369CBD45252003A700E7F2DD /* Model */,
 				369CBD442520039300E7F2DD /* Extension */,
 				36BDD27825200811008F2218 /* Timeline */,
@@ -262,6 +259,23 @@
 				36BDD2562520076B008F2218 /* PullRequestLoader.swift */,
 			);
 			path = "Github API";
+			sourceTree = "<group>";
+		};
+		36F2FA6C284BFE22007317B3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				36F2FA6D284BFE40007317B3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36F2FA6F284BFEA4007317B3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				36F2FA71284BFEBD007317B3 /* Preview Assets.xcassets */,
+				36F2FA73284BFF35007317B3 /* LatestPullRequestData.swift */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3697A61B251D41A30002C6C9 /* Preview Assets.xcassets in Resources */,
+				36F2FA6E284BFE40007317B3 /* Preview Assets.xcassets in Resources */,
+				36F2FA72284BFEBD007317B3 /* Preview Assets.xcassets in Resources */,
 				3697A618251D41A30002C6C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BDD22D25200707008F2218 /* Repo.swift in Sources */,
+				36F2FA75284BFF4F007317B3 /* LatestPullRequestData.swift in Sources */,
 				3697A652251D41D50002C6C9 /* PullRequestWidget.swift in Sources */,
 				36BDD25C25200783008F2218 /* PullRequestLoader.swift in Sources */,
 				367CB60525215BE1004B41FD /* PullRequestWidgetView.swift in Sources */,
@@ -608,7 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Github Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Github Tracker/Preview Content\" \"GithubWidget/Preview Content\"";
 				DEVELOPMENT_TEAM = 8U4BWS342R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Github Tracker/Info.plist";
@@ -631,7 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Github Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Github Tracker/Preview Content\" \"GithubWidget/PreviewContent\"";
 				DEVELOPMENT_TEAM = 8U4BWS342R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Github Tracker/Info.plist";
