@@ -72,31 +72,55 @@ struct PullRequestWidgetView : View {
                 // No open pull requests found
                 Text("No open Pull Requests")
             }
-            
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
-            .padding()
-        .background(LinearGradient(gradient: Gradient(colors: [Color(UIColor.darkGray), .black]), startPoint: .top, endPoint: .bottom))
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+            alignment: .leading
+        )
+        .padding()
+        .background(
+            LinearGradient(
+                gradient: Gradient(
+                    colors: [
+                        Color(UIColor.darkGray),
+                        .black
+                    ]
+                ),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        )
         
         // Tell the main app to link to the Pull Request when
         // opened from this widget
-        .widgetURL(URL(string: "https://github.com/\(entry.repo.account)/\(entry.repo.name)/pull/\(entry.pr?.number ?? 1)"))
+        .widgetURL(URL(
+            string: "https://github.com/\(entry.repo.account)/\(entry.repo.name)/pull/\(entry.pr?.number ?? 1)"
+        ))
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PullRequestWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        let baseWidget = PullRequestWidgetView(
+        let widget = PullRequestWidgetView(
             entry: LatestPullRequest.helloWorld
         )
 
         Group {
-            baseWidget
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
-            baseWidget
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
-            baseWidget
-                .previewContext(WidgetPreviewContext(family: .systemLarge))
+            widget.previewContext(WidgetPreviewContext(
+                family: .systemSmall
+            ))
+            widget.previewContext(WidgetPreviewContext(
+                family: .systemMedium
+            ))
+            widget.previewContext(WidgetPreviewContext(
+                family: .systemLarge
+            ))
+            widget.previewContext(WidgetPreviewContext(
+                family: .systemExtraLarge
+            ))
         }
     }
 }
