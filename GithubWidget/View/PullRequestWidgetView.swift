@@ -81,7 +81,13 @@ struct PullRequestWidgetView : View {
             alignment: .leading
         )
         .padding()
-        .background(
+        
+        // Tell the main app to link to the Pull Request when
+        // opened from this widget
+        .widgetURL(URL(
+            string: "https://github.com/\(entry.repo.account)/\(entry.repo.name)/pull/\(entry.pr?.number ?? 1)"
+        ))
+        .containerBackground(for: .widget) {
             LinearGradient(
                 gradient: Gradient(
                     colors: [
@@ -92,13 +98,7 @@ struct PullRequestWidgetView : View {
                 startPoint: .top,
                 endPoint: .bottom
             )
-        )
-        
-        // Tell the main app to link to the Pull Request when
-        // opened from this widget
-        .widgetURL(URL(
-            string: "https://github.com/\(entry.repo.account)/\(entry.repo.name)/pull/\(entry.pr?.number ?? 1)"
-        ))
+        }
     }
 }
 
