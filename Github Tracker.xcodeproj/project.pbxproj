@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,7 @@
 		3697A655251D41D90002C6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3697A654251D41D90002C6C9 /* Assets.xcassets */; };
 		3697A657251D41D90002C6C9 /* PullRequestWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3697A653251D41D50002C6C9 /* PullRequestWidget.intentdefinition */; };
 		3697A658251D41D90002C6C9 /* PullRequestWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3697A653251D41D50002C6C9 /* PullRequestWidget.intentdefinition */; };
-		3697A65B251D41D90002C6C9 /* GithubWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3697A64A251D41D50002C6C9 /* GithubWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3697A65B251D41D90002C6C9 /* GithubWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3697A64A251D41D50002C6C9 /* GithubWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		36BDD22D25200707008F2218 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CBD502520041400E7F2DD /* Repo.swift */; };
 		36BDD2322520070C008F2218 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CBD562520042900E7F2DD /* PullRequest.swift */; };
 		36BDD24425200713008F2218 /* LatestPullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CBD5C2520048000E7F2DD /* LatestPullRequest.swift */; };
@@ -58,15 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3697A65F251D41D90002C6C9 /* Embed App Extensions */ = {
+		3697A65F251D41D90002C6C9 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3697A65B251D41D90002C6C9 /* GithubWidgetExtension.appex in Embed App Extensions */,
+				3697A65B251D41D90002C6C9 /* GithubWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -288,7 +288,7 @@
 				3697A60C251D419F0002C6C9 /* Sources */,
 				3697A60D251D419F0002C6C9 /* Frameworks */,
 				3697A60E251D419F0002C6C9 /* Resources */,
-				3697A65F251D41D90002C6C9 /* Embed App Extensions */,
+				3697A65F251D41D90002C6C9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -359,8 +359,9 @@
 		3697A608251D419F0002C6C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					3697A60F251D419F0002C6C9 = {
 						CreatedOnToolsVersion = 12.0;
@@ -538,6 +539,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -552,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -599,6 +601,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -607,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
