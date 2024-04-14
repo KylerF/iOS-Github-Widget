@@ -87,7 +87,7 @@ struct PullRequestWidgetView : View {
         .widgetURL(URL(
             string: "https://github.com/\(entry.repo.account)/\(entry.repo.name)/pull/\(entry.pr?.number ?? 1)"
         ))
-        .containerBackground(for: .widget) {
+        .background(
             LinearGradient(
                 gradient: Gradient(
                     colors: [
@@ -98,6 +98,21 @@ struct PullRequestWidgetView : View {
                 startPoint: .top,
                 endPoint: .bottom
             )
+        ).apply {
+            if #available(iOS 17.0, *) {
+                $0.containerBackground(for: .widget) {
+                    LinearGradient(
+                        gradient: Gradient(
+                            colors: [
+                                Color(UIColor.darkGray),
+                                .black
+                            ]
+                        ),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                }
+            }
         }
     }
 }
